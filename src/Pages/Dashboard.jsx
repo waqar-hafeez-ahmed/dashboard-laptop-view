@@ -5,6 +5,7 @@ import Donut from "../components/Donut";
 import { dashboardCard } from "../constants";
 import { DailyRevenueCard } from "../assets/dashboard";
 import Area from "../components/Area";
+import Bar from "../components/Bar";
 
 const Dashboard = () => {
   return (
@@ -73,7 +74,7 @@ const Dashboard = () => {
           Total yearly and monthly Revenue
         </h4>
         <div className="flex justify-between items-center w-full px-12 py-4 rounded-md bg-white shadow-[0_0_5px_0_#00000052] ">
-          <Area />
+          <Bar />
         </div>
       </div>
     </section>
