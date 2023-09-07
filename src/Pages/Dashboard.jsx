@@ -9,7 +9,7 @@ import Bar from "../components/Bar";
 
 const Dashboard = () => {
   return (
-    <section className="mx-8 flex flex-col my-6">
+    <section className=" flex flex-col section">
       {/* Frist Row  */}
       <div className="flex justify-between items-center w-full gap-5">
         <div className="flex justify-between items-center w-full px-12 py-4 rounded-md bg-white shadow-[0_0_5px_0_#00000052] h-[147px] flex-1">

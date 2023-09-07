@@ -4,7 +4,7 @@ import SBLogout from "./SBLogout.svg";
 import SBPayment from "./SBPayment.svg";
 import SBSetting from "./SBSetting.svg";
 import SBSubscription from "./SBSubscription.svg";
-import CMS from "./CMS.png"
+import CMS from "./CMS.png";
 
 export {
   CMS,

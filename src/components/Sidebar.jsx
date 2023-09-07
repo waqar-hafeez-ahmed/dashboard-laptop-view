@@ -1,12 +1,15 @@
 import { sidebar } from "../constants";
-import {SBLogout} from "../assets/sidebar";
-
+import { SBLogout } from "../assets/sidebar";
+import { NavLink } from "react-router-dom";
+import Logo from "../assets/Logo.png";
 
 const Sidebar = () => {
   return (
     <section className="flex flex-col text-center py-4 bg-primary w-[191px] h-[752px]">
-      <div className="mt-4">
-        <h3 className="text-white font-bold">trancehepay</h3>
+      <div className="mt-3 flex justify-center">
+        <NavLink to="/">
+          <img src={Logo} alt="" />
+        </NavLink>
       </div>
       <div className="mt-[80px]">
         {sidebar.map((list) => (
@@ -25,15 +28,20 @@ const Sidebar = () => {
               <ul className=" flex flex-col gap-2.5">
                 {list.link.map((link) => (
                   <li key={link.name}>
-                    <div className="flex ml-[35px] gap-3 cursor-pointer mt-3">
-                      <img src={link.img} alt="" />
-                      <a
-                        href="/"
-                        className="text-[#9D9D9D] text-sm font-Poppins font-normal"
-                      >
-                        {link.name}
-                      </a>
-                    </div>
+                    <NavLink
+                      to={link.to}
+                      className={({ isActive }) =>
+                        "font-Poppins text-sm " +
+                        (isActive
+                          ? "text-white  font-medium"
+                          : "text-[#9D9D9D] font-normal")
+                      }
+                    >
+                      <div className="flex ml-[35px] gap-3 cursor-pointer mt-3">
+                        {link.img}
+                        <a href="">{link.name}</a>
+                      </div>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
