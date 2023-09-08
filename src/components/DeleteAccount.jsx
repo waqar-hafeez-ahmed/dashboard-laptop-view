@@ -1,8 +1,22 @@
 import WarnSign from "../assets/settings/Warning.png";
 import Bin from "../assets/settings/DeleteBin.png";
+import { useState } from "react";
 const DeleteAccount = () => {
+  const [deleted, setDeleted] = useState(false);
+  const handleClick = () => {
+    setDeleted(!deleted);
+  };
+  setTimeout(() => {
+    setDeleted(false);
+  }, 2000);
   return (
     <div className="flex flex-1 flex-col items-center rounded-md shadow-[0_0_5px_0_#00000052] bg-white px-20 h-[360px]">
+      {deleted && (
+        <div className="absolute mx-auto top-24 rounded-md py-2 pl-28 pr-14 bg-[#FFACAC] text-lg font-Poppins font-medium text-[#A50000] transition ease-in delay-150  duration-300  ">
+          Account Deleted!
+          <span className="font-normal ml-8">Please check your e-mail</span>
+        </div>
+      )}
       <h2 className="text-xl font-Poppins font-semibold text-[#050505] mt-8 ">
         Delete Account
       </h2>
@@ -23,7 +37,10 @@ const DeleteAccount = () => {
         </p>
       </div>
       <div className="flex justify-end w-[615px] mt-4 ">
-        <button className="flex items-center rounded-md px-4 gap-2 py-2 font-Poppins font-medium text-white text-xs leading-[24px] bg-[#DF2E3A]  ">
+        <button
+          className="flex items-center rounded-md px-4 gap-2 py-2 font-Poppins font-medium text-white text-xs leading-[24px] bg-[#DF2E3A] "
+          onClick={handleClick}
+        >
           <img src={Bin} alt="" /> Delete Account
         </button>
       </div>
