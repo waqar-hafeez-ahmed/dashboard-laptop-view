@@ -47,16 +47,20 @@ export const sidebar = [
     title: "Merchant",
     titleImg: CMS,
     link: [
-      { name: "Dashboard", img: <SBSubscription />, to: "dashboard" },
-      { name: "Payment", img: <SBPayment />, to: "pashboard" },
+      {
+        name: "Dashboard",
+        img: <SBSubscription />,
+        to: "/merchant-dashboard",
+      },
+      { name: "Payment", img: <SBPayment />, to: "/merchant-payment" },
     ],
   },
   {
     title: "CMS",
     titleImg: CMS,
     link: [
-      { name: "Create Blog", img: <SBCreate />, to: "create-blog" },
-      { name: "Create Admin", img: <SBCreate />, to: "create-admin" },
+      { name: "Create Blog", img: <SBCreate />, to: "/create-blog" },
+      { name: "Create Admin", img: <SBCreate />, to: "/create-admin" },
     ],
   },
 ];

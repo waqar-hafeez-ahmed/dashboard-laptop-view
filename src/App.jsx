@@ -4,6 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import Settings from "./Pages/Settings";
 import Subscription from "./Pages/Subscription";
+import MerchantsDash from "./Pages/MerchantsDash";
+import MerchantsPayment from "./Pages/MerchantsPayment";
+import CreateBlog from "./Pages/CreateBlog";
+import CreateAdmin from "./Pages/CreateAdmin";
 
 const App = () => {
   return (
@@ -18,6 +22,16 @@ const App = () => {
             <Route path="/" element={<Dashboard />}></Route>
             <Route path="/setting/*" element={<Settings />}></Route>
             <Route path="/subscription" element={<Subscription />}></Route>
+            <Route
+              path="/merchant-dashboard"
+              element={<MerchantsDash />}
+            ></Route>
+            <Route
+              path="/merchant-payment"
+              element={<MerchantsPayment />}
+            ></Route>
+            <Route path="/create-blog" element={<CreateBlog />}></Route>
+            <Route path="/create-admin" element={<CreateAdmin />}></Route>
           </Routes>
         </div>
       </div>

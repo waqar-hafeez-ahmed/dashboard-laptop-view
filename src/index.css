@@ -12,6 +12,9 @@
   padding: 24px 32px;
 }
 
+thead tr {
+  color: #181818 !important;
+}
 /* @layer components {
   .max-container {
     max-width: 1440px;
