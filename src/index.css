@@ -12,8 +12,13 @@
   padding: 24px 32px;
 }
 
-thead tr {
-  color: #181818 !important;
+tbody tr {
+  border-bottom-width: 1px !important;
+  border-color: #c7c7c7 !important;
+}
+
+tbody tr .p-4 {
+  padding: 8px 1rem !important;
 }
 /* @layer components {
   .max-container {

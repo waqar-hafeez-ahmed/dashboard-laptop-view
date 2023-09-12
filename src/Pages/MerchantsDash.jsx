@@ -1,23 +1,22 @@
-import DashboardCard from "../components/DashboardCard";
-import { dashboardCard } from "../constants";
+import { Route, Routes } from "react-router-dom";
 import TableComp from "../components/Table";
+import MerchantProfile from "../components/MerchantProfile";
+import MerchantInactive from "../components/MerchantInactive";
+import SendEmail from "./SendEmail";
 
 const MerchantsDash = () => {
   return (
-    <section className=" flex flex-col section">
-      <div className="flex justify-between items-center w-full gap-14 mt-[50px]">
-        {dashboardCard.map((card) => (
-          <DashboardCard key={card.title} {...card} />
-        ))}
-      </div>
-
-      <div className="flex flex-1 flex-col w-full mt-14 gap-4 ">
-        <h4 className="text-[25px] font-Poppins font-semibold text-primary ml-4">
-          All Merchants
-        </h4>
-        <div className="flex justify-between items-center w-full px-12 py-4 rounded-md bg-white shadow-[0_0_5px_0_#00000052] ">
-          <TableComp />
-        </div>
+    <section className=" section">
+      <div>
+        <Routes>
+          <Route index element={<TableComp />}></Route>
+          <Route path="merchant-profile" element={<MerchantProfile />}></Route>
+          <Route
+            path="merchant-inactive"
+            element={<MerchantInactive />}
+          ></Route>
+          <Route path="sendemail" element={<SendEmail />}></Route>
+        </Routes>
       </div>
     </section>
   );

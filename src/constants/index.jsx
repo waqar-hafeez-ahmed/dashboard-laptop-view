@@ -97,3 +97,30 @@ export const dashboardCard = [
     border: "border-[#FF9356]",
   },
 ];
+
+export const merchantProfileCard = [
+  {
+    title: "Total Customers",
+    img: Customers,
+    value: "153413",
+    border: "border-[#008BD9]",
+  },
+  {
+    title: "Pending Requests",
+    img: pendingRequests,
+    value: "4654",
+    border: "border-[#FF7A00]",
+  },
+  {
+    title: "Active Installments",
+    img: Merchants,
+    value: "1564",
+    border: "border-[#008BD9]",
+  },
+  {
+    title: "Refund",
+    img: Refunds,
+    value: "₦ 155461564",
+    border: "border-[#FF9356]",
+  },
+];

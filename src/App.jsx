@@ -20,12 +20,13 @@ const App = () => {
         <div>
           <Routes>
             <Route path="/" element={<Dashboard />}></Route>
-            <Route path="/setting/*" element={<Settings />}></Route>
             <Route path="/subscription" element={<Subscription />}></Route>
+            <Route path="/setting/*" element={<Settings />}></Route>
             <Route
-              path="/merchant-dashboard"
+              path="/merchant-dashboard/*"
               element={<MerchantsDash />}
             ></Route>
+
             <Route
               path="/merchant-payment"
               element={<MerchantsPayment />}
